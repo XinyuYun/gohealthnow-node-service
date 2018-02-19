@@ -57,7 +57,7 @@ function genGlucoData(){
   return {
   	glucose_Record: [
   		{
-  			level:3,//Math.ceil(Math.random()*15, 0) + 2, //random 2-17
+  			level:Math.ceil(Math.random()*15, 0) + 2, //random 2-17
   			recordedTime:new Date(2018, month, day, 07, Math.ceil(Math.random()*19), 0),
   			uploadingVersion:0,
   			glucoseType:Math.ceil(Math.random()*6, 0) //random 0-6
@@ -77,7 +77,7 @@ _.each(userList, function(user, index){
     	//exercise_Records:genStepCount(month, day),
     	//meal_Records:genMeal(month, day),
     	//meal_Records:newMeal,
-    	created_Time: new Date()
+    	created_Time: new Date(2018, month, day)
     };
 
     var xml = genXmlOutput('user_Record', req);
