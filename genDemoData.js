@@ -56,11 +56,11 @@ console.log('day:' + day);
 function genGlucoData(){
   return {
   	glucose_Record: [
-  		{
-  			level:Math.ceil(Math.random()*15, 0) + 2, //random 2-17
-  			recordedTime:new Date(2018, month, day, 07, Math.ceil(Math.random()*19), 0),
+      {
+  			level:Math.floor(Math.random()*10/0.1)/10+3,//3.0-13.0
+  			recordedTime:new Date(2018, month, day, 07, Math.ceil(Math.random()*30), 0),
   			uploadingVersion:0,
-  			glucoseType:Math.ceil(Math.random()*6, 0) //random 0-6
+  			glucoseType:Math.floor(Math.random()*7) //0-6
   		}]};
 }
 
